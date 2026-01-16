@@ -1,13 +1,16 @@
 import path from "path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite"; // 新增：引入 tailwindcss
 
 // 兼容性写法：获取当前目录
 const __dirname = path.resolve();
 
 export default defineConfig({
-  // 注意：这里删除了 themePlugin()，因为它导致了报错
-  plugins: [react()],
+  plugins: [
+    react(),
+    tailwindcss(), // 新增：启用 tailwindcss 插件
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "client", "src"),

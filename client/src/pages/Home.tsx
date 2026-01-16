@@ -70,7 +70,8 @@ export default function Home() {
             {/* About Section */}
             <section className="space-y-2">
               <h2 className="text-lg font-bold border-b border-border pb-1 mb-3 uppercase tracking-wide">About</h2>
-              <p className="text-justify text-foreground/90">
+              {/* 关键修改：添加 whitespace-pre-line 样式 */}
+              <p className="text-justify text-foreground/90 whitespace-pre-line">
                 {profile.bio}
               </p>
             </section>
@@ -102,7 +103,8 @@ export default function Home() {
                           <span className="font-semibold text-foreground">
                             {pub.title}
                           </span>
-                          <br />
+                            
+
                           <span className="text-foreground/80">
                             {pub.authors.map((author, i) => (
                               <span key={i} className={author.includes("Lei Sang") || author.includes("Sang Lei") ? "font-bold text-foreground underline decoration-dotted underline-offset-2" : ""}>
@@ -110,7 +112,8 @@ export default function Home() {
                               </span>
                             ))}
                           </span>
-                          <br />
+                            
+
                           <span className="italic text-foreground/70 text-sm">
                             {pub.venue}
                           </span>

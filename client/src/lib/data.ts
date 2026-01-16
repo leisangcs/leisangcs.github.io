@@ -1,13 +1,13 @@
 import { Github, Twitter, Linkedin, Mail, MapPin, GraduationCap, Building2, Globe } from "lucide-react";
 
 export interface Publication {
-  id?: string; // 兼容 Home.tsx 的 key={pub.id}
+  id?: string;
   title: string;
   authors: string[];
-  venue: string; // Home.tsx 用的是 venue 而不是 conference
+  venue: string;
   year: number;
-  citations?: number; // Home.tsx 用到了 citations
-  tags?: string[]; // Home.tsx 用到了 tags
+  citations?: number;
+  tags?: string[];
   pdfUrl?: string;
   codeUrl?: string;
 }
@@ -16,62 +16,62 @@ export interface Profile {
   name: string;
   chineseName: string;
   title: string;
-  affiliation: string; // Home.tsx 用的是 affiliation 而不是 university
+  affiliation: string;
   email: string;
-  social?: { // Home.tsx 用的是 social.googleScholar
+  social?: {
     googleScholar?: string;
     github?: string;
   };
   location: string;
   bio: string;
   avatar: string;
-  researchInterests: string[]; // 必须加上这个！
+  researchInterests: string[];
 }
 
 export const profile: Profile = {
   name: "Lei Sang",
   chineseName: "桑磊",
   title: "Associate Professor",
-  affiliation: "Shandong University", // 对应 Home.tsx
-  email: "sang@sdu.edu.cn",
+  affiliation: "School of Computer Science and Technology, Anhui University",
+  email: "sanglei@ahu.edu.cn",
   social: {
     googleScholar: "https://scholar.google.com/citations?user=k1z4nF8AAAAJ&hl=en",
     github: "https://github.com/leisangcs",
   },
-  location: "Jinan, China",
-  bio: "I am currently an Associate Professor at the School of Software, Shandong University. I received my Ph.D. degree from Shandong University in 2022, under the supervision of Prof. Xuemeng Song and Prof. Liqiang Nie. My research interests include Data Mining, Information Retrieval, and Recommender Systems.",
-  avatar: "/images/avatar.jpg",
-  researchInterests: [ // 补上这个字段
+  location: "Hefei, China",
+  bio: "Lei Sang is currently an Associate Professor at the School of Computer Science and Technology, Anhui University. He received his Ph.D. degree from the University of Technology Sydney in 2021. His research focuses on Data Mining and Machine Learning, with a particular emphasis on Recommender Systems and Graph Learning. He has published over 20 papers in top-tier international journals and conferences, including TKDE, TOIS, SIGIR, KDD, AAAI, and ACM MM. He serves as a reviewer for several prestigious journals and conferences. Currently, he presides over the National Natural Science Foundation of China (NSFC ) and the Anhui Provincial Natural Science Foundation.\n\n桑磊，安徽大学计算机科学与技术学院副教授。2021年博士毕业于悉尼科技大学。主要研究方向包括数据挖掘、推荐系统和图学习。在 TKDE, TOIS, SIGIR, KDD, AAAI, ACM MM 等顶级国际期刊和会议上发表论文20余篇。主持国家自然科学基金青年项目和安徽省自然科学基金项目。",
+  avatar: "/images/avatar_placeholder.jpg",
+  researchInterests: [
     "Data Mining",
-    "Information Retrieval",
     "Recommender Systems",
-    "Multimedia Computing"
+    "Graph Neural Networks"
   ]
 };
 
 export const publications: Publication[] = [
   {
     id: "1",
-    title: "Explainable Session-based Recommendation with Dual-Process Decision Modeling",
-    authors: ["Lei Sang", "Xuemeng Song", "Liqiang Nie", "et al."],
-    venue: "ACM TOIS",
+    title: "Intent-guided Heterogeneous Graph Contrastive Learning for Recommendation",
+    authors: ["Lei Sang", "Yu Wang", "Yi Zhang", "Yiwen Zhang", "Xindong Wu"],
+    venue: "IEEE Transactions on Knowledge and Data Engineering (TKDE)",
     year: 2025,
-    tags: ["CCF-A"]
+    citations: 27,
+    tags: ["CCF A"]
   },
   {
     id: "2",
-    title: "Knowledge-Enhanced Hierarchical Graph Transformer for Session-based Recommendation",
-    authors: ["Lei Sang", "Xuemeng Song", "Liqiang Nie", "et al."],
-    venue: "AAAI",
-    year: 2024,
-    tags: ["CCF-A"]
+    title: "Simple Yet Effective Heterogeneous Graph Contrastive Learning for Recommendation",
+    authors: ["Lei Sang", "Haiyan Zhang", "Yu Wang", "Yiwen Zhang"],
+    venue: "IEEE Transactions on Consumer Electronics",
+    year: 2025
   },
   {
     id: "3",
-    title: "Personalized Item Compatibility Modeling via Complementary Policy Learning",
-    authors: ["Lei Sang", "Xuemeng Song", "Liqiang Nie", "et al."],
-    venue: "ACM MM",
-    year: 2023,
-    tags: ["CCF-A"]
+    title: "AdaGIN: Adaptive Graph Interaction Network for Click-Through Rate Prediction",
+    authors: ["Lei Sang", "Honghao Li", "Yiwen Zhang", "Yi Zhang", "Yun Yang"],
+    venue: "ACM Transactions on Information Systems (TOIS)",
+    year: 2025,
+    citations: 16,
+    tags: ["CCF A"]
   }
 ];

@@ -23,8 +23,7 @@ jobs:
 
       - name: Install pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: 9
+        # 注意：这里删除了 version: 9，让它自动读取 package.json
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -33,7 +32,7 @@ jobs:
           cache: 'pnpm'
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install
 
       - name: Build
         run: pnpm run build

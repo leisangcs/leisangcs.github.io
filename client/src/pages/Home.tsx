@@ -70,7 +70,6 @@ export default function Home() {
             {/* About Section */}
             <section className="space-y-2">
               <h2 className="text-lg font-bold border-b border-border pb-1 mb-3 uppercase tracking-wide">About</h2>
-              {/* 关键修改：添加 whitespace-pre-line 样式 */}
               <p className="text-justify text-foreground/90 whitespace-pre-line">
                 {profile.bio}
               </p>
@@ -97,36 +96,37 @@ export default function Home() {
                   <div key={year} className="space-y-2">
                     <h3 className="text-base font-bold text-foreground/60 border-b border-border/50 pb-1 mb-2">{year}</h3>
                     
-                    <ul className="space-y-3 list-disc list-outside ml-4">
+                    <ul className="space-y-4 list-disc list-outside ml-4">
                       {pubs.map((pub) => (
-                        <li key={pub.id} className="pl-1">
-                          <span className="font-semibold text-foreground">
+                        <li key={pub.id} className="pl-1 flex flex-col gap-1">
+                          {/* 标题 */}
+                          <div className="font-semibold text-foreground leading-tight">
                             {pub.title}
-                          </span>
-                            
-
-                          <span className="text-foreground/80">
+                          </div>
+                          
+                          {/* 作者 */}
+                          <div className="text-foreground/80 leading-tight">
                             {pub.authors.map((author, i) => (
-                              <span key={i} className={author.includes("Lei Sang") || author.includes("Sang Lei") ? "font-bold text-foreground underline decoration-dotted underline-offset-2" : ""}>
+                              <span key={i} className={author.includes("Lei Sang") || author.includes("Sang Lei") || author.includes("桑磊") ? "font-bold text-foreground underline decoration-dotted underline-offset-2" : ""}>
                                 {author}{i < pub.authors.length - 1 ? ", " : ""}
                               </span>
                             ))}
-                          </span>
-                            
-
-                          <span className="italic text-foreground/70 text-sm">
-                            {pub.venue}
-                          </span>
-                          {pub.citations && (
-                            <span className="text-xs text-muted-foreground ml-2">
-                              [Cited: {pub.citations}]
-                            </span>
-                          )}
-                          {pub.tags?.map(tag => (
-                            <Badge key={tag} variant="outline" className="ml-2 h-4 px-1 text-[10px] font-normal rounded-sm border-muted-foreground/30 text-muted-foreground">
-                              {tag}
-                            </Badge>
-                          ))}
+                          </div>
+                          
+                          {/* 期刊/会议 + 引用 + 标签 */}
+                          <div className="italic text-foreground/70 text-sm flex flex-wrap items-center gap-2 leading-tight">
+                            <span>{pub.venue}</span>
+                            {pub.citations && (
+                              <span className="text-xs text-muted-foreground">
+                                [Cited: {pub.citations}]
+                              </span>
+                            )}
+                            {pub.tags?.map(tag => (
+                              <Badge key={tag} variant="outline" className="h-4 px-1 text-[10px] font-normal rounded-sm border-muted-foreground/30 text-muted-foreground">
+                                {tag}
+                              </Badge>
+                            ))}
+                          </div>
                         </li>
                       ))}
                     </ul>

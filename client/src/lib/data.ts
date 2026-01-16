@@ -33,7 +33,7 @@ export const profile: Profile = {
   chineseName: "桑磊",
   title: "Associate Professor",
   affiliation: "School of Computer Science and Technology, Anhui University",
-  email: "sanglei@ahu.edu.cn",
+  email: "sanglei # ahu.edu.cn",
   social: {
     googleScholar: "https://scholar.google.com/citations?user=k1z4nF8AAAAJ&hl=en",
     github: "https://github.com/leisangcs",

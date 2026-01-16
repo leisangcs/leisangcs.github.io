@@ -24,7 +24,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 9  # 必须加上这行，强制使用 pnpm v9
+          version: 10  # 改为 10，配合您本地版本
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -33,7 +33,8 @@ jobs:
           cache: 'pnpm'
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --no-frozen-lockfile  # 加上这个参数，强制安装！
+
 
       - name: Build
         run: pnpm run build

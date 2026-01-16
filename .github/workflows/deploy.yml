@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -20,24 +20,25 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      
-      # 修正：移除显式版本号，让它自动读取 package.json 中的版本
-      - name: Setup pnpm
+
+      - name: Install pnpm
         uses: pnpm/action-setup@v4
-      
+        with:
+          version: 9
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: 'pnpm'
-          
+
       - name: Install dependencies
-        run: pnpm install
-        
+        run: pnpm install --frozen-lockfile
+
       - name: Build
-        run: pnpm build
+        run: pnpm run build
         env:
-          VITE_BASE_PATH: /
+          VITE_BASE_PATH: "/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

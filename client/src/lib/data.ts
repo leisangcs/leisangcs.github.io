@@ -35,7 +35,7 @@ export const profile: Profile = {
   affiliation: "School of Computer Science and Technology, Anhui University",
   email: "sanglei # ahu.edu.cn",
   social: {
-    googleScholar: "https://scholar.google.com/citations?user=k1z4nF8AAAAJ&hl=en",
+    googleScholar: "https://scholar.google.com/citations?user=WkbOdHQAAAAJ&hl=en",
     github: "https://github.com/leisangcs",
   },
   location: "Hefei, China",

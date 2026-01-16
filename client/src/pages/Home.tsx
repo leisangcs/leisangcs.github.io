@@ -26,7 +26,7 @@ export default function Home() {
           <aside className="lg:col-span-3 space-y-4">
             <div className="w-40 h-40 overflow-hidden border border-border shadow-sm">
               <img 
-                src="/images/avatar_placeholder.jpg" 
+                src="/images/leisang-photo-v2.png" 
                 alt={profile.name}
                 className="w-full h-full object-cover"
               />

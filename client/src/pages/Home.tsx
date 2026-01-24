@@ -127,6 +127,34 @@ export default function Home() {
                               </Badge>
                             ))}
                           </div>
+                          
+                          {/* PDF和Code链接 */}
+                          {(pub.pdfUrl || pub.codeUrl) && (
+                            <div className="flex gap-3 text-xs">
+                              {pub.pdfUrl && (
+                                <a 
+                                  href={pub.pdfUrl} 
+                                  target="_blank" 
+                                  rel="noreferrer"
+                                  className="text-blue-600 hover:text-blue-800 underline flex items-center gap-1"
+                                >
+                                  <ExternalLink className="w-3 h-3" />
+                                  PDF
+                                </a>
+                              )}
+                              {pub.codeUrl && (
+                                <a 
+                                  href={pub.codeUrl} 
+                                  target="_blank" 
+                                  rel="noreferrer"
+                                  className="text-blue-600 hover:text-blue-800 underline flex items-center gap-1"
+                                >
+                                  <ExternalLink className="w-3 h-3" />
+                                  Code
+                                </a>
+                              )}
+                            </div>
+                          )}
                         </li>
                       ))}
                     </ul>

@@ -88,7 +88,7 @@ export const publications: Publication[] = [
   {
     id: "zhou-unsupervised-2026",
     title: "Unsupervised heterogeneous group streaming feature selection",
-    authors: ["Peng Zhou", "Qianzhen Chen", "Lei Sang", "Shu Zhao", "Xindong Wu"],
+    authors: ["Peng Zhou", "Qianzhen Chen", "Lei Sang*", "Shu Zhao", "Xindong Wu"],
     venue: "Pattern Recognition",
     year: 2026,
   },

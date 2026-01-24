@@ -56,7 +56,7 @@ export const publications: Publication[] = [
     venue: "IEEE Transactions on Computational Social Systems",
     year: 2026,
     tags: ["CTR Prediction"],
-    pdfUrl: "https://ieeexplore.ieee.org/document/11303955",
+    pdfUrl: "/papers/Optimizing_Feature_Interaction_via_Information_Bottleneck_for_CTR_Prediction.pdf",
   },
 
   {

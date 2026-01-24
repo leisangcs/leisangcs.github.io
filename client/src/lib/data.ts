@@ -199,7 +199,7 @@ export const publications: Publication[] = [
   {
     id: "wang-generative-contrastive-2025",
     title: "Generative-Contrastive Heterogeneous Graph Neural Network",
-    authors: ["Yu Wang", "Lei Sang", "Yi Zhang", "Yiwen Zhang", "Xindong Wu"],
+    authors: ["Yu Wang", "Lei Sang*", "Yi Zhang", "Yiwen Zhang*", "Xindong Wu"],
     venue: "IEEE Transactions on Big Data",
     year: 2025,
     tags: ["Graph Learning"],

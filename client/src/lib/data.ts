@@ -66,6 +66,7 @@ export const publications: Publication[] = [
     venue: "ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD)",
     year: 2026,
     tags: ["CTR Prediction", "KDD"],
+    pdfUrl: "https://arxiv.org/pdf/2407.13349.pdf",
   },
 
   {
@@ -147,6 +148,7 @@ export const publications: Publication[] = [
     venue: "ACM Transactions on Information Systems",
     year: 2025,
     tags: ["TOIS", "CTR Prediction"],
+    pdfUrl: "https://arxiv.org/pdf/2312.09715.pdf",
   },
   {
     id: "zhang-simplify-2025",
@@ -236,6 +238,7 @@ export const publications: Publication[] = [
     venue: "arXiv preprint",
     year: 2025,
     tags: ["CTR Prediction"],
+    pdfUrl: "https://arxiv.org/pdf/2504.17699.pdf",
   },
   {
     id: "mu-robustness-2025",
@@ -244,6 +247,7 @@ export const publications: Publication[] = [
     venue: "arXiv preprint",
     year: 2025,
     tags: ["Security/Robustness", "NLP"],
+    pdfUrl: "https://arxiv.org/pdf/2506.03627.pdf",
   },
   {
     id: "sang-multi-view-2024",
@@ -284,6 +288,7 @@ export const publications: Publication[] = [
     venue: "arXiv preprint",
     year: 2024,
     tags: ["Recommendation"],
+    pdfUrl: "https://arxiv.org/pdf/2409.03294.pdf",
   },
   {
     id: "li-ensemble-2024",
@@ -292,6 +297,7 @@ export const publications: Publication[] = [
     venue: "arXiv preprint",
     year: 2024,
     tags: ["CTR Prediction"],
+    pdfUrl: "https://arxiv.org/pdf/2411.16122.pdf",
   },
   {
     id: "sang-adversarial-2023",

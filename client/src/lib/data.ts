@@ -50,6 +50,16 @@ export const profile: Profile = {
 
 export const publications: Publication[] = [
   {
+    id: "sang-ibnet-2026",
+    title: "Optimizing Feature Interaction via Information Bottleneck for CTR Prediction",
+    authors: ["Lei Sang", "Hanwei Li", "Honghao Li", "Yiwen Zhang", "Xindong Wu"],
+    venue: "IEEE Transactions on Computational Social Systems",
+    year: 2026,
+    tags: ["CTR Prediction"],
+    pdfUrl: "https://ieeexplore.ieee.org/document/11303955",
+  },
+
+  {
     id: "li-fcn-2026",
     title: "FCN: Fusing Exponential and Linear Cross Network for Click-Through Rate Prediction",
     authors: ["Honghao Li", "Yiwen Zhang", "Yi Zhang", "Hanwei Li", "Lei Sang", "Jieming Zhu"],

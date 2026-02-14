@@ -92,6 +92,8 @@ export const publications: Publication[] = [
     authors: ["Peng Zhou", "Qianzhen Chen", "Lei Sang*", "Shu Zhao", "Xindong Wu"],
     venue: "Pattern Recognition",
     year: 2026,
+  
+    pdfUrl: "https://www.sciencedirect.com/science/article/abs/pii/S0031320325009410",
   },
   {
     id: "sang-heterogeneous-2026",
@@ -100,6 +102,8 @@ export const publications: Publication[] = [
     venue: "ACM Transactions on Recommender Systems",
     year: 2026,
     tags: ["Recommendation"],
+  
+    pdfUrl: "https://dl.acm.org/doi/10.1145/3656480",
   },
   {
     id: "sang-intent-guided-2025",
@@ -108,6 +112,8 @@ export const publications: Publication[] = [
     venue: "IEEE Transactions on Knowledge and Data Engineering",
     year: 2025,
     tags: ["Recommendation", "Graph Learning", "TKDE"],
+  
+    pdfUrl: "https://ieeexplore.ieee.org/document/10857594/",
   },
   {
     id: "sang-adagin:-2025",
@@ -116,6 +122,8 @@ export const publications: Publication[] = [
     venue: "ACM Transactions on Information Systems",
     year: 2025,
     tags: ["Graph Learning", "TOIS", "CTR Prediction"],
+  
+    pdfUrl: "https://dl.acm.org/doi/10.1145/3681785",
   },
    {
     id: "li-revisiting-2025",
@@ -124,6 +132,8 @@ export const publications: Publication[] = [
     venue: "Proceedings of the ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD)",
     year: 2025,
     tags: ["KDD", "CTR Prediction"],
+  
+    pdfUrl: "https://dl.acm.org/doi/10.1145/3711896.3737106",
   },
   {
     id: "wang-intent-2025",
@@ -132,6 +142,8 @@ export const publications: Publication[] = [
     venue: "Proceedings of the International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR)",
     year: 2025,
     tags: ["Recommendation", "NLP", "SIGIR"],
+  
+    pdfUrl: "https://dl.acm.org/doi/10.1145/3726302.3730011",
   },
   {
     id: "zhang-unveiling-2025",
@@ -140,6 +152,8 @@ export const publications: Publication[] = [
     venue: "Proceedings of the International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR)",
     year: 2025,
     tags: ["Recommendation", "SIGIR"],
+  
+    pdfUrl: "https://dl.acm.org/doi/10.1145/3726302.3730111",
   },
   {
     id: "li-cetn:-2025",
@@ -157,6 +171,8 @@ export const publications: Publication[] = [
     venue: "ACM Transactions on Information Systems",
     year: 2025,
     tags: ["Recommendation", "Graph Learning", "TOIS"],
+  
+    pdfUrl: "https://dl.acm.org/doi/10.1145/3701230",
   },
   {
     id: "sang-denoising-2025",
@@ -165,6 +181,8 @@ export const publications: Publication[] = [
     venue: "ACM Transactions on Information Systems",
     year: 2025,
     tags: ["Recommendation", "Graph Learning", "TOIS"],
+  
+    pdfUrl: "https://dl.acm.org/doi/10.1145/3706632",
   },
   {
     id: "sang-bottlenecked-2025",
@@ -173,6 +191,8 @@ export const publications: Publication[] = [
     venue: "ACM Transactions on Information Systems",
     year: 2025,
     tags: ["Security/Robustness", "Recommendation", "Graph Learning", "TOIS"],
+  
+    pdfUrl: "https://dl.acm.org/doi/10.1145/3750725",
   },
   {
     id: "sang-masked-2025",
@@ -181,6 +201,8 @@ export const publications: Publication[] = [
     venue: "Applied Soft Computing",
     year: 2025,
     tags: ["Security/Robustness", "Recommendation", "Graph Learning"],
+  
+    pdfUrl: "https://www.sciencedirect.com/science/article/pii/S156849462500907X",
   },
   {
     id: "sang-towards-2025",
@@ -189,6 +211,8 @@ export const publications: Publication[] = [
     venue: "Expert Systems with Applications",
     year: 2025,
     tags: ["Recommendation"],
+  
+    pdfUrl: "https://www.sciencedirect.com/science/article/pii/S0957417424022139",
   },
   {
     id: "sang-bi-directional-2025",
@@ -197,6 +221,8 @@ export const publications: Publication[] = [
     venue: "IEEE Transactions on Big Data",
     year: 2025,
     tags: ["Recommendation", "Graph Learning"],
+  
+    pdfUrl: "https://ieeexplore.ieee.org/document/10496254/",
   },
   {
     id: "wang-generative-contrastive-2025",
@@ -205,6 +231,8 @@ export const publications: Publication[] = [
     venue: "IEEE Transactions on Big Data",
     year: 2025,
     tags: ["Graph Learning"],
+  
+    pdfUrl: "https://ieeexplore.ieee.org/document/11003807/",
   },
   {
     id: "jiang-revisiting-2025",
@@ -213,6 +241,8 @@ export const publications: Publication[] = [
     venue: "IEEE Transactions on Consumer Electronics",
     year: 2025,
     tags: ["Recommendation"],
+  
+    pdfUrl: "https://ieeexplore.ieee.org/document/10833758/",
   },
   {
     id: "sang-simple-2025",
@@ -221,6 +251,8 @@ export const publications: Publication[] = [
     venue: "IEEE Transactions on Consumer Electronics",
     year: 2025,
     tags: ["Recommendation", "Graph Learning"],
+  
+    pdfUrl: "https://ieeexplore.ieee.org/document/11005410/",
   },
   {
     id: "chen-dual-domain-2025",
@@ -229,6 +261,8 @@ export const publications: Publication[] = [
     venue: "IEEE Transactions on Computational Social Systems",
     year: 2025,
     tags: ["Recommendation"],
+  
+    pdfUrl: "https://ieeexplore.ieee.org/document/10856264/",
   },
   
   {
@@ -256,6 +290,8 @@ export const publications: Publication[] = [
     venue: "Applied Intelligence",
     year: 2024,
     tags: ["Recommendation"],
+  
+    pdfUrl: "https://link.springer.com/article/10.1007/s10489-024-05825-z",
   },
   {
     id: "wang-privacy-preserving-2024",
@@ -264,6 +300,8 @@ export const publications: Publication[] = [
     venue: "Knowledge-Based Systems",
     year: 2024,
     tags: ["Recommendation"],
+  
+    pdfUrl: "https://www.sciencedirect.com/science/article/pii/S0950705124011638",
   },
   {
     id: "li-simcen:-2024",
@@ -272,6 +310,8 @@ export const publications: Publication[] = [
     venue: "Proceedings of the ACM International Conference on Multimedia (ACM MM)",
     year: 2024,
     tags: ["CTR Prediction"],
+  
+    pdfUrl: "https://dl.acm.org/doi/10.1145/3664647.3681203",
   },
   {
     id: "zhang-exploring-2024",
@@ -280,6 +320,8 @@ export const publications: Publication[] = [
     venue: "Proceedings of the International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR)",
     year: 2024,
     tags: ["Recommendation", "Graph Learning", "SIGIR"],
+  
+    pdfUrl: "https://dl.acm.org/doi/10.1145/3626772.3657738",
   },
   {
     id: "wang-federated-2024",
@@ -306,6 +348,8 @@ export const publications: Publication[] = [
     venue: "IEEE Transactions on Computational Social Systems",
     year: 2023,
     tags: ["Security/Robustness", "Recommendation", "Graph Learning"],
+  
+    pdfUrl: "https://ieeexplore.ieee.org/document/10124876/",
   },
   {
     id: "sang-knowledge-2021",
@@ -314,6 +358,8 @@ export const publications: Publication[] = [
     venue: "Expert Systems with Applications",
     year: 2021,
     tags: ["Recommendation", "Graph Learning"],
+  
+    pdfUrl: "https://www.sciencedirect.com/science/article/pii/S0957417420307685",
   },
   {
     id: "sang-knowledge-2021",
@@ -322,6 +368,8 @@ export const publications: Publication[] = [
     venue: "Neurocomputing",
     year: 2021,
     tags: ["Recommendation", "Graph Learning"],
+  
+    pdfUrl: "https://www.sciencedirect.com/science/article/pii/S0925231221004276",
   },
   {
     id: "wu-noise-2021",
@@ -330,6 +378,8 @@ export const publications: Publication[] = [
     venue: "IEEE Transactions on Circuits and Systems for Video Technology",
     year: 2021,
     tags: ["Graph Learning"],
+  
+    pdfUrl: "https://ieeexplore.ieee.org/document/9252928/",
   },
   {
     id: "sang-context-dependent-2021",
@@ -338,6 +388,8 @@ export const publications: Publication[] = [
     venue: "IEEE Transactions on Multimedia",
     year: 2021,
     tags: ["Recommendation", "NLP"],
+  
+    pdfUrl: "https://ieeexplore.ieee.org/document/9136871/",
   },
   {
     id: "sang-multi-modal-2019",
@@ -345,6 +397,8 @@ export const publications: Publication[] = [
     authors: ["Lei Sang", "Min Xu", "Shengsheng Qian", "Xindong Wu"],
     venue: "Neurocomputing",
     year: 2019,
+  
+    pdfUrl: "https://www.sciencedirect.com/science/article/pii/S0925231218315297",
   },
   {
     id: "sang-aaane:-2019",
@@ -353,6 +407,8 @@ export const publications: Publication[] = [
     venue: "PAKDD 2019",
     year: 2019,
 
+  
+    pdfUrl: "https://link.springer.com/chapter/10.1007/978-3-030-16142-2_1",
   },
 
   {
@@ -362,6 +418,8 @@ export const publications: Publication[] = [
     venue: "ICDM Workshops",
     year: 2016,
     tags: ["NLP"],
+  
+    pdfUrl: "https://ieeexplore.ieee.org/document/7836732/",
   },
 
 

@@ -99,8 +99,9 @@ export default function Home() {
                     <div className="space-y-4">
                       {pubs.map((pub) => (
                         <div key={pub.id} className="flex items-start gap-3">
-                          {/* 左侧：PDF图标和链接按钮 */}
-                          <div className="flex flex-col items-center gap-1 shrink-0 pt-0.5" style={{ minWidth: '36px' }}>
+                          {/* 左侧：PDF图标 + paper/code 链接，纵向排列 */}
+                          <div className="flex flex-col items-center gap-1 shrink-0 pt-0.5" style={{ minWidth: '42px' }}>
+                            {/* PDF 图标 */}
                             {pub.pdfUrl ? (
                               <a
                                 href={pub.pdfUrl}
@@ -130,9 +131,31 @@ export default function Home() {
                                 </svg>
                               </div>
                             )}
+                            {/* paper 链接 */}
+                            {pub.officialUrl && (
+                              <a
+                                href={pub.officialUrl}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="text-[11px] text-blue-600 hover:text-blue-800 hover:underline font-medium leading-none"
+                              >
+                                paper
+                              </a>
+                            )}
+                            {/* code 链接 */}
+                            {pub.codeUrl && (
+                              <a
+                                href={pub.codeUrl}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="text-[11px] text-blue-600 hover:text-blue-800 hover:underline font-medium leading-none"
+                              >
+                                code
+                              </a>
+                            )}
                           </div>
 
-                          {/* 右侧：论文信息 */}
+                          {/* 右侧：论文信息（不再包含链接） */}
                           <div className="flex flex-col gap-0.5 min-w-0">
                             {/* 标题 */}
                             <div className="font-bold text-foreground leading-snug">
@@ -148,7 +171,7 @@ export default function Home() {
                               ))}
                             </div>
                             
-                            {/* 期刊/会议 + 链接 */}
+                            {/* 期刊/会议 + 标签 */}
                             <div className="text-sm text-foreground/70 leading-snug flex flex-wrap items-center gap-x-2 gap-y-0.5">
                               <span className="italic">{pub.venue}</span>
                               {pub.tags?.map(tag => (
@@ -156,37 +179,6 @@ export default function Home() {
                                   {tag}
                                 </Badge>
                               ))}
-                              {/* 行内链接：pdf / paper / code */}
-                              {pub.pdfUrl && (
-                                <a
-                                  href={pub.pdfUrl}
-                                  target="_blank"
-                                  rel="noreferrer"
-                                  className="text-blue-600 hover:text-blue-800 hover:underline font-medium not-italic"
-                                >
-                                  pdf
-                                </a>
-                              )}
-                              {pub.officialUrl && (
-                                <a
-                                  href={pub.officialUrl}
-                                  target="_blank"
-                                  rel="noreferrer"
-                                  className="text-blue-600 hover:text-blue-800 hover:underline font-medium not-italic"
-                                >
-                                  paper
-                                </a>
-                              )}
-                              {pub.codeUrl && (
-                                <a
-                                  href={pub.codeUrl}
-                                  target="_blank"
-                                  rel="noreferrer"
-                                  className="text-blue-600 hover:text-blue-800 hover:underline font-medium not-italic"
-                                >
-                                  Codes
-                                </a>
-                              )}
                             </div>
                           </div>
                         </div>

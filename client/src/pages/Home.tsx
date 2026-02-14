@@ -139,7 +139,7 @@ export default function Home() {
                                 rel="noreferrer"
                                 className="text-[11px] text-blue-600 hover:text-blue-800 hover:underline font-medium leading-none"
                               >
-                                paper
+                                link
                               </a>
                             )}
                             {/* code 链接 */}

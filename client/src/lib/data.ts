@@ -415,7 +415,7 @@ export const publications: Publication[] = [
     year: 2021,
     tags: ["Recommendation", "Graph Learning"],
   
-    pdfUrl: "/papers/Knowledge_graph_enhanced_neural_collaborative_recommendation.pdf",
+    pdfUrl: "/papers/Knowledge_Graph_Enhanced_Neural_Collaborative_Recommendation.pdf",
     officialUrl: "https://www.sciencedirect.com/science/article/pii/S0957417420307685",
   },
   {
@@ -426,6 +426,7 @@ export const publications: Publication[] = [
     year: 2021,
     tags: ["Recommendation", "Graph Learning"],
   
+    pdfUrl: "/papers/Knowledge_Graph_Enhanced_Neural_Collaborative_Filtering_with_Residual_Recurrent_Network.pdf",
     officialUrl: "https://www.sciencedirect.com/science/article/pii/S0925231221004276",
   },
   {
@@ -436,6 +437,7 @@ export const publications: Publication[] = [
     year: 2021,
     tags: ["Graph Learning"],
   
+    pdfUrl: "/papers/Noise_Augmented_Double-Stream_Graph_Convolutional_Networks_for_Image_Captioning.pdf",
     officialUrl: "https://ieeexplore.ieee.org/document/9252928/",
   },
   {
@@ -446,6 +448,7 @@ export const publications: Publication[] = [
     year: 2021,
     tags: ["Recommendation", "NLP"],
   
+    pdfUrl: "/papers/Context-Dependent_Propagating-Based_Video_Recommendation_in_Multimodal_Heterogeneous_Information_Networks.pdf",
     officialUrl: "https://ieeexplore.ieee.org/document/9136871/",
   },
   {
@@ -455,6 +458,7 @@ export const publications: Publication[] = [
     venue: "Neurocomputing",
     year: 2019,
   
+    pdfUrl: "/papers/Multi-Modal_Multi-View_Bayesian_Semantic_Embedding_for_Community_Question_Answering.pdf",
     officialUrl: "https://www.sciencedirect.com/science/article/pii/S0925231218315297",
   },
   {

@@ -57,8 +57,8 @@ export const publications: Publication[] = [
     venue: "IEEE Transactions on Computational Social Systems",
     year: 2026,
     tags: ["CTR Prediction"],
-    officialUrl: "https://ieeexplore.ieee.org/document/11303955/",
     pdfUrl: "/papers/Optimizing_Feature_Interaction_via_Information_Bottleneck_for_CTR_Prediction.pdf",
+    officialUrl: "https://ieeexplore.ieee.org/document/11303955/",
   },
 
   {
@@ -68,8 +68,8 @@ export const publications: Publication[] = [
     venue: "ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD)",
     year: 2026,
     tags: ["CTR Prediction", "KDD"],
-    officialUrl: "https://arxiv.org/abs/2407.13349",
     pdfUrl: "/papers/FCN_Fusing_Exponential_and_Linear_Cross_Network_for_Click-Through_Rate_Predictio.pdf",
+    officialUrl: "https://arxiv.org/abs/2407.13349",
   },
 
   {
@@ -80,8 +80,8 @@ export const publications: Publication[] = [
     year: 2026,
     tags: ["Recommendation", "AAAI"],
   
-    officialUrl: "https://arxiv.org/abs/2509.25275",
     pdfUrl: "/papers/CAFU_Constrained_Alignment_and_Filtered_Uniformity_for_Denoising_Recommendation.pdf",
+    officialUrl: "https://arxiv.org/abs/2509.25275",
   },
   {
     id: "fang-revisiting-2026",
@@ -91,8 +91,8 @@ export const publications: Publication[] = [
     year: 2026,
     tags: ["Recommendation", "Graph Learning", "AAAI"],
   
+    pdfUrl: "/papers/Revisiting_Contrastive_Learning_in_Collaborative_Filtering_via_Parallel_Graph_Filters.pdf",
     officialUrl: "https://arxiv.org/abs/2504.04443",
-    pdfUrl: "/papers/Revisiting_Contrastive_Learning_in_Collaborative_Filtering_via_Parallel_Graph_Fi.pdf",
   },
 
   {
@@ -102,6 +102,7 @@ export const publications: Publication[] = [
     venue: "Pattern Recognition",
     year: 2026,
   
+    pdfUrl: "/papers/Unsupervised_Heterogeneous_Group_Streaming_Feature_Selection.pdf",
     officialUrl: "https://www.sciencedirect.com/science/article/abs/pii/S0031320325009410",
   },
   {
@@ -112,6 +113,7 @@ export const publications: Publication[] = [
     year: 2026,
     tags: ["Recommendation"],
   
+    pdfUrl: "/papers/Heterogeneous_Adaptive_Preference_Learning_for_Recommendation.pdf",
     officialUrl: "https://dl.acm.org/doi/10.1145/3656480",
   },
   {
@@ -122,6 +124,7 @@ export const publications: Publication[] = [
     year: 2025,
     tags: ["Recommendation", "Graph Learning", "TKDE"],
   
+    pdfUrl: "/papers/Intent-Guided_Heterogeneous_Graph_Contrastive_Learning_for_Recommendation.pdf",
     officialUrl: "https://ieeexplore.ieee.org/document/10857594/",
   },
   {
@@ -132,6 +135,7 @@ export const publications: Publication[] = [
     year: 2025,
     tags: ["Graph Learning", "TOIS", "CTR Prediction"],
   
+    pdfUrl: "/papers/AdaGIN_Adaptive_Graph_Interaction_Network_for_Click-Through_Rate_Prediction.pdf",
     officialUrl: "https://dl.acm.org/doi/10.1145/3681785",
   },
    {
@@ -142,8 +146,8 @@ export const publications: Publication[] = [
     year: 2025,
     tags: ["KDD", "CTR Prediction"],
   
+    pdfUrl: "/papers/Revisiting_Feature_Interactions_from_the_Perspective_of_Quadratic_Neural_Networks_for_Click-Through_Rate_Prediction.pdf",
     officialUrl: "https://dl.acm.org/doi/10.1145/3711896.3737106",
-    pdfUrl: "/papers/Revisiting_Feature_Interactions_from_the_Perspective_of_Quadratic_Neural_Networ.pdf",
   },
   {
     id: "wang-intent-2025",
@@ -153,8 +157,8 @@ export const publications: Publication[] = [
     year: 2025,
     tags: ["Recommendation", "NLP", "SIGIR"],
   
-    officialUrl: "https://dl.acm.org/doi/10.1145/3726302.3730011",
     pdfUrl: "/papers/Intent_Representation_Learning_with_Large_Language_Model_for_Recommendation.pdf",
+    officialUrl: "https://dl.acm.org/doi/10.1145/3726302.3730011",
   },
   {
     id: "zhang-unveiling-2025",
@@ -164,8 +168,8 @@ export const publications: Publication[] = [
     year: 2025,
     tags: ["Recommendation", "SIGIR"],
   
+    pdfUrl: "/papers/Unveiling_Contrastive_Learnings_Capability_of_Neighborhood_Aggregation_for_Collaborative_Filtering.pdf",
     officialUrl: "https://dl.acm.org/doi/10.1145/3726302.3730111",
-    pdfUrl: "/papers/Unveiling_Contrastive_Learnings_Capability_of_Neighborhood_Aggregation_for_Coll.pdf",
   },
   {
     id: "li-cetn:-2025",
@@ -174,8 +178,8 @@ export const publications: Publication[] = [
     venue: "ACM Transactions on Information Systems",
     year: 2025,
     tags: ["TOIS", "CTR Prediction"],
+    pdfUrl: "/papers/CETN_Contrast-Enhanced_Through_Network_for_Click-Through_Rate_Prediction.pdf",
     officialUrl: "https://arxiv.org/abs/2312.09715",
-    pdfUrl: "/papers/CETN_Contrast-enhanced_Through_Network_for_Click-Through_Rate_Prediction.pdf",
   },
   {
     id: "zhang-simplify-2025",
@@ -185,6 +189,7 @@ export const publications: Publication[] = [
     year: 2025,
     tags: ["Recommendation", "Graph Learning", "TOIS"],
   
+    pdfUrl: "/papers/Simplify_to_the_Limit_Embedding-Less_Graph_Collaborative_Filtering_for_Recommender_Systems.pdf",
     officialUrl: "https://dl.acm.org/doi/10.1145/3701230",
   },
   {
@@ -195,6 +200,7 @@ export const publications: Publication[] = [
     year: 2025,
     tags: ["Recommendation", "Graph Learning", "TOIS"],
   
+    pdfUrl: "/papers/Denoising_Heterogeneous_Graph_Pre-training_Framework_for_Recommendation.pdf",
     officialUrl: "https://dl.acm.org/doi/10.1145/3706632",
   },
   {
@@ -205,6 +211,7 @@ export const publications: Publication[] = [
     year: 2025,
     tags: ["Security/Robustness", "Recommendation", "Graph Learning", "TOIS"],
   
+    pdfUrl: "/papers/Bottlenecked_Heterogeneous_Graph_Contrastive_Learning_for_Robust_Recommendation.pdf",
     officialUrl: "https://dl.acm.org/doi/10.1145/3750725",
   },
   {
@@ -215,6 +222,7 @@ export const publications: Publication[] = [
     year: 2025,
     tags: ["Security/Robustness", "Recommendation", "Graph Learning"],
   
+    pdfUrl: "/papers/Masked_Heterogeneous_Graph_Attention_Network_for_Robust_Recommendation.pdf",
     officialUrl: "https://www.sciencedirect.com/science/article/pii/S156849462500907X",
   },
   {
@@ -225,6 +233,7 @@ export const publications: Publication[] = [
     year: 2025,
     tags: ["Recommendation"],
   
+    pdfUrl: "/papers/Towards_Similar_Alignment_and_Unique_Uniformity_in_Collaborative_Filtering.pdf",
     officialUrl: "https://www.sciencedirect.com/science/article/pii/S0957417424022139",
   },
   {
@@ -235,6 +244,7 @@ export const publications: Publication[] = [
     year: 2025,
     tags: ["Recommendation", "Graph Learning"],
   
+    pdfUrl: "/papers/Bi-Directional_Transfer_Graph_Contrastive_Learning_for_Social_Recommendation.pdf",
     officialUrl: "https://ieeexplore.ieee.org/document/10496254/",
   },
   {
@@ -245,8 +255,8 @@ export const publications: Publication[] = [
     year: 2025,
     tags: ["Graph Learning"],
   
-    officialUrl: "https://ieeexplore.ieee.org/document/11003807/",
     pdfUrl: "/papers/Generative-Contrastive_Heterogeneous_Graph_Neural_Network.pdf",
+    officialUrl: "https://ieeexplore.ieee.org/document/11003807/",
   },
   {
     id: "jiang-revisiting-2025",
@@ -256,8 +266,8 @@ export const publications: Publication[] = [
     year: 2025,
     tags: ["Recommendation"],
   
+    pdfUrl: "/papers/Revisiting_Alignment_and_Uniformity_for_Recommendation_via_Discrimination_and_Reliable_Assessment.pdf",
     officialUrl: "https://ieeexplore.ieee.org/document/10833758/",
-    pdfUrl: "/papers/Revisiting_Alignment_and_Uniformity_for_Recommendation_via_Discrimination_and_Re.pdf",
   },
   {
     id: "sang-simple-2025",
@@ -267,6 +277,7 @@ export const publications: Publication[] = [
     year: 2025,
     tags: ["Recommendation", "Graph Learning"],
   
+    pdfUrl: "/papers/Simple_Yet_Effective_Heterogeneous_Graph_Contrastive_Learning_for_Recommendation.pdf",
     officialUrl: "https://ieeexplore.ieee.org/document/11005410/",
   },
   {
@@ -277,8 +288,8 @@ export const publications: Publication[] = [
     year: 2025,
     tags: ["Recommendation"],
   
-    officialUrl: "https://ieeexplore.ieee.org/document/10856264/",
     pdfUrl: "/papers/Dual-Domain_Collaborative_Denoising_for_Social_Recommendation.pdf",
+    officialUrl: "https://ieeexplore.ieee.org/document/10856264/",
   },
   
   {
@@ -288,8 +299,8 @@ export const publications: Publication[] = [
     venue: "arXiv preprint",
     year: 2025,
     tags: ["CTR Prediction"],
-    officialUrl: "https://arxiv.org/abs/2504.17699",
     pdfUrl: "/papers/Quadratic_Interest_Network_for_Multimodal_Click-Through_Rate_Prediction.pdf",
+    officialUrl: "https://arxiv.org/abs/2504.17699",
   },
   {
     id: "mu-robustness-2025",
@@ -298,8 +309,28 @@ export const publications: Publication[] = [
     venue: "arXiv preprint",
     year: 2025,
     tags: ["Security/Robustness", "NLP"],
-    officialUrl: "https://arxiv.org/abs/2506.03627",
     pdfUrl: "/papers/Robustness_of_Prompting_Enhancing_Robustness_of_Large_Language_Models_Against_Pr.pdf",
+    officialUrl: "https://arxiv.org/abs/2506.03627",
+  },
+    {
+    id: "sang-graph-structure-2025",
+    title: "Graph Structure Learning for Robust Recommendation",
+    authors: ["Lei Sang", "Hang Yuan", "Yuee Huang", "Yiwen Zhang"],
+    venue: "Tsinghua Science and Technology",
+    year: 2025,
+    tags: ["Recommendation", "Graph Learning"],
+    pdfUrl: "/papers/Graph_Structure_Learning_for_Robust_Recommendation.pdf",
+    officialUrl: "https://www.sciopen.com/article/10.26599/TST.2024.9010048",
+  },
+  {
+    id: "sang-heterogeneous-neighborhood-2025",
+    title: "Heterogeneous Neighborhood-Enhanced Graph Contrastive Learning for Recommendation",
+    authors: ["Lei Sang", "Maohao Huang", "Yiwen Zhang"],
+    venue: "IEEE Transactions on Computational Social Systems",
+    year: 2025,
+    tags: ["Recommendation", "Graph Learning"],
+    pdfUrl: "/papers/Heterogeneous_Neighborhood-Enhanced_Graph_Contrastive_Learning_for_Recommendation.pdf",
+    officialUrl: "https://ieeexplore.ieee.org/document/11120860/",
   },
   {
     id: "sang-multi-view-2024",
@@ -309,6 +340,7 @@ export const publications: Publication[] = [
     year: 2024,
     tags: ["Recommendation"],
   
+    pdfUrl: "/papers/Multi-View_Denoising_Contrastive_Learning_for_Bundle_Recommendation.pdf",
     officialUrl: "https://link.springer.com/article/10.1007/s10489-024-05825-z",
   },
   {
@@ -319,8 +351,8 @@ export const publications: Publication[] = [
     year: 2024,
     tags: ["Recommendation"],
   
+    pdfUrl: "/papers/A_Privacy-Preserving_Framework_with_Multi-Modal_Data_for_Cross-Domain_Recommendation.pdf",
     officialUrl: "https://www.sciencedirect.com/science/article/pii/S0950705124011638",
-    pdfUrl: "/papers/A_privacy-preserving_framework_with_multi-modal_data_for_cross-domain_recommenda.pdf",
   },
   {
     id: "li-simcen:-2024",
@@ -330,6 +362,7 @@ export const publications: Publication[] = [
     year: 2024,
     tags: ["CTR Prediction"],
   
+    pdfUrl: "/papers/SimCEN_Simple_Contrast-Enhanced_Network_for_CTR_Prediction.pdf",
     officialUrl: "https://dl.acm.org/doi/10.1145/3664647.3681203",
   },
   {
@@ -340,8 +373,8 @@ export const publications: Publication[] = [
     year: 2024,
     tags: ["Recommendation", "Graph Learning", "SIGIR"],
   
+    pdfUrl: "/papers/Exploring_the_Individuality_and_Collectivity_of_Intents_behind_Interactions_for_Graph_Collaborative_Filtering.pdf",
     officialUrl: "https://dl.acm.org/doi/10.1145/3626772.3657738",
-    pdfUrl: "/papers/Exploring_the_Individuality_and_Collectivity_of_Intents_behind_Interactions_for_.pdf",
   },
   {
     id: "wang-federated-2024",
@@ -350,8 +383,8 @@ export const publications: Publication[] = [
     venue: "arXiv preprint",
     year: 2024,
     tags: ["Recommendation"],
-    officialUrl: "https://arxiv.org/abs/2409.03294",
     pdfUrl: "/papers/Federated_Prototype-based_Contrastive_Learning_for_Privacy-Preserving_Cross-doma.pdf",
+    officialUrl: "https://arxiv.org/abs/2409.03294",
   },
   {
     id: "li-ensemble-2024",
@@ -360,8 +393,8 @@ export const publications: Publication[] = [
     venue: "arXiv preprint",
     year: 2024,
     tags: ["CTR Prediction"],
-    officialUrl: "https://arxiv.org/abs/2411.16122",
     pdfUrl: "/papers/Ensemble_Learning_via_Knowledge_Transfer_for_CTR_Prediction.pdf",
+    officialUrl: "https://arxiv.org/abs/2411.16122",
   },
   {
     id: "sang-adversarial-2023",
@@ -371,6 +404,7 @@ export const publications: Publication[] = [
     year: 2023,
     tags: ["Security/Robustness", "Recommendation", "Graph Learning"],
   
+    pdfUrl: "/papers/Adversarial_Heterogeneous_Graph_Neural_Network_for_Robust_Recommendation.pdf",
     officialUrl: "https://ieeexplore.ieee.org/document/10124876/",
   },
   {
@@ -381,8 +415,8 @@ export const publications: Publication[] = [
     year: 2021,
     tags: ["Recommendation", "Graph Learning"],
   
-    officialUrl: "https://www.sciencedirect.com/science/article/pii/S0957417420307685",
     pdfUrl: "/papers/Knowledge_graph_enhanced_neural_collaborative_recommendation.pdf",
+    officialUrl: "https://www.sciencedirect.com/science/article/pii/S0957417420307685",
   },
   {
     id: "sang-knowledge-2021",
@@ -431,8 +465,8 @@ export const publications: Publication[] = [
     year: 2019,
 
   
-    officialUrl: "https://link.springer.com/chapter/10.1007/978-3-030-16142-2_1",
     pdfUrl: "/papers/AAANE_Attention-Based_Adversarial_Autoencoder_for_Multi-scale_Network_Embedding.pdf",
+    officialUrl: "https://link.springer.com/chapter/10.1007/978-3-030-16142-2_1",
   },
 
   {
@@ -443,10 +477,9 @@ export const publications: Publication[] = [
     year: 2016,
     tags: ["NLP"],
   
-    officialUrl: "https://ieeexplore.ieee.org/document/7836732/",
     pdfUrl: "/papers/WEFEST_Word_Embedding_Feature_Extension_for_Short_Text_Classification.pdf",
+    officialUrl: "https://ieeexplore.ieee.org/document/7836732/",
   },
-
 
 ];
 

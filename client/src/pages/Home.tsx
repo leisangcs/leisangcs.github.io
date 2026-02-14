@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { profile, publications } from "@/lib/data";
-import { ExternalLink, Mail, MapPin } from "lucide-react";
+import { ExternalLink, FileText, Mail, MapPin } from "lucide-react";
 import { useMemo } from "react";
 
 export default function Home() {
@@ -128,17 +128,28 @@ export default function Home() {
                             ))}
                           </div>
                           
-                          {/* PDF和Code链接 */}
-                          {(pub.pdfUrl || pub.codeUrl) && (
-                            <div className="flex gap-3 text-xs">
+                          {/* Paper / PDF / Code 链接按钮 */}
+                          {(pub.officialUrl || pub.pdfUrl || pub.codeUrl) && (
+                            <div className="flex flex-wrap gap-2 mt-0.5">
+                              {pub.officialUrl && (
+                                <a 
+                                  href={pub.officialUrl} 
+                                  target="_blank" 
+                                  rel="noreferrer"
+                                  className="inline-flex items-center gap-1 px-2 py-0.5 text-xs font-medium rounded border border-blue-300 bg-blue-50 text-blue-700 hover:bg-blue-100 hover:border-blue-400 transition-colors"
+                                >
+                                  <ExternalLink className="w-3 h-3" />
+                                  Paper
+                                </a>
+                              )}
                               {pub.pdfUrl && (
                                 <a 
                                   href={pub.pdfUrl} 
                                   target="_blank" 
                                   rel="noreferrer"
-                                  className="text-blue-600 hover:text-blue-800 underline flex items-center gap-1"
+                                  className="inline-flex items-center gap-1 px-2 py-0.5 text-xs font-medium rounded border border-red-300 bg-red-50 text-red-700 hover:bg-red-100 hover:border-red-400 transition-colors"
                                 >
-                                  <ExternalLink className="w-3 h-3" />
+                                  <FileText className="w-3 h-3" />
                                   PDF
                                 </a>
                               )}
@@ -147,7 +158,7 @@ export default function Home() {
                                   href={pub.codeUrl} 
                                   target="_blank" 
                                   rel="noreferrer"
-                                  className="text-blue-600 hover:text-blue-800 underline flex items-center gap-1"
+                                  className="inline-flex items-center gap-1 px-2 py-0.5 text-xs font-medium rounded border border-green-300 bg-green-50 text-green-700 hover:bg-green-100 hover:border-green-400 transition-colors"
                                 >
                                   <ExternalLink className="w-3 h-3" />
                                   Code

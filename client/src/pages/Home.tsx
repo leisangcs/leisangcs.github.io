@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { profile, publications } from "@/lib/data";
-import { ExternalLink, FileText, Mail, MapPin } from "lucide-react";
+import { ExternalLink, Mail, MapPin } from "lucide-react";
 import { useMemo } from "react";
 
 export default function Home() {
@@ -93,82 +93,105 @@ export default function Home() {
               
               <div className="space-y-6">
                 {publicationsByYear.map(([year, pubs]) => (
-                  <div key={year} className="space-y-2">
-                    <h3 className="text-base font-bold text-foreground/60 border-b border-border/50 pb-1 mb-2">{year}</h3>
+                  <div key={year} className="space-y-3">
+                    <h3 className="text-base font-bold text-foreground">In the Year of {year}:</h3>
                     
-                    <ul className="space-y-4 list-disc list-outside ml-4">
+                    <div className="space-y-4">
                       {pubs.map((pub) => (
-                        <li key={pub.id} className="pl-1 flex flex-col gap-1">
-                          {/* 标题 */}
-                          <div className="font-semibold text-foreground leading-tight">
-                            {pub.title}
-                          </div>
-                          
-                          {/* 作者 */}
-                          <div className="text-foreground/80 leading-tight">
-                            {pub.authors.map((author, i) => (
-                              <span key={i} className={author.includes("Lei Sang") || author.includes("Sang Lei") || author.includes("桑磊") ? "font-bold text-foreground underline decoration-dotted underline-offset-2" : ""}>
-                                {author}{i < pub.authors.length - 1 ? ", " : ""}
-                              </span>
-                            ))}
-                          </div>
-                          
-                          {/* 期刊/会议 + 引用 + 标签 */}
-                          <div className="italic text-foreground/70 text-sm flex flex-wrap items-center gap-2 leading-tight">
-                            <span>{pub.venue}</span>
-                            {pub.citations && (
-                              <span className="text-xs text-muted-foreground">
-                                [Cited: {pub.citations}]
-                              </span>
+                        <div key={pub.id} className="flex items-start gap-3">
+                          {/* 左侧：PDF图标和链接按钮 */}
+                          <div className="flex flex-col items-center gap-1 shrink-0 pt-0.5" style={{ minWidth: '36px' }}>
+                            {pub.pdfUrl ? (
+                              <a
+                                href={pub.pdfUrl}
+                                target="_blank"
+                                rel="noreferrer"
+                                title="Download PDF"
+                                className="group flex flex-col items-center"
+                              >
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 30" className="w-7 h-8 group-hover:opacity-80 transition-opacity">
+                                  <rect x="1" y="1" width="22" height="28" rx="2" fill="#fff" stroke="#dc2626" strokeWidth="1.5"/>
+                                  <rect x="1" y="1" width="22" height="10" rx="2" fill="#dc2626"/>
+                                  <text x="12" y="8.5" textAnchor="middle" fill="#fff" fontSize="6" fontWeight="bold" fontFamily="Arial, sans-serif">PDF</text>
+                                  <line x1="5" y1="16" x2="19" y2="16" stroke="#ccc" strokeWidth="1"/>
+                                  <line x1="5" y1="19" x2="19" y2="19" stroke="#ccc" strokeWidth="1"/>
+                                  <line x1="5" y1="22" x2="14" y2="22" stroke="#ccc" strokeWidth="1"/>
+                                </svg>
+                              </a>
+                            ) : (
+                              <div className="w-7 h-8 opacity-30">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 30" className="w-7 h-8">
+                                  <rect x="1" y="1" width="22" height="28" rx="2" fill="#fff" stroke="#999" strokeWidth="1.5"/>
+                                  <rect x="1" y="1" width="22" height="10" rx="2" fill="#999"/>
+                                  <text x="12" y="8.5" textAnchor="middle" fill="#fff" fontSize="6" fontWeight="bold" fontFamily="Arial, sans-serif">PDF</text>
+                                  <line x1="5" y1="16" x2="19" y2="16" stroke="#ccc" strokeWidth="1"/>
+                                  <line x1="5" y1="19" x2="19" y2="19" stroke="#ccc" strokeWidth="1"/>
+                                  <line x1="5" y1="22" x2="14" y2="22" stroke="#ccc" strokeWidth="1"/>
+                                </svg>
+                              </div>
                             )}
-                            {pub.tags?.map(tag => (
-                              <Badge key={tag} variant="outline" className="h-4 px-1 text-[10px] font-normal rounded-sm border-muted-foreground/30 text-muted-foreground">
-                                {tag}
-                              </Badge>
-                            ))}
                           </div>
-                          
-                          {/* Paper / PDF / Code 链接按钮 */}
-                          {(pub.officialUrl || pub.pdfUrl || pub.codeUrl) && (
-                            <div className="flex flex-wrap gap-2 mt-0.5">
-                              {pub.officialUrl && (
-                                <a 
-                                  href={pub.officialUrl} 
-                                  target="_blank" 
+
+                          {/* 右侧：论文信息 */}
+                          <div className="flex flex-col gap-0.5 min-w-0">
+                            {/* 标题 */}
+                            <div className="font-bold text-foreground leading-snug">
+                              {pub.title}
+                            </div>
+                            
+                            {/* 作者 */}
+                            <div className="text-foreground/80 leading-snug text-sm">
+                              {pub.authors.map((author, i) => (
+                                <span key={i} className={author.includes("Lei Sang") || author.includes("Sang Lei") || author.includes("桑磊") ? "font-bold text-foreground" : ""}>
+                                  {author}{i < pub.authors.length - 1 ? ", " : ""}
+                                </span>
+                              ))}
+                            </div>
+                            
+                            {/* 期刊/会议 + 链接 */}
+                            <div className="text-sm text-foreground/70 leading-snug flex flex-wrap items-center gap-x-2 gap-y-0.5">
+                              <span className="italic">{pub.venue}</span>
+                              {pub.tags?.map(tag => (
+                                <Badge key={tag} variant="outline" className="h-4 px-1 text-[10px] font-normal rounded-sm border-muted-foreground/30 text-muted-foreground">
+                                  {tag}
+                                </Badge>
+                              ))}
+                              {/* 行内链接：pdf / paper / code */}
+                              {pub.pdfUrl && (
+                                <a
+                                  href={pub.pdfUrl}
+                                  target="_blank"
                                   rel="noreferrer"
-                                  className="inline-flex items-center gap-1 px-2 py-0.5 text-xs font-medium rounded border border-blue-300 bg-blue-50 text-blue-700 hover:bg-blue-100 hover:border-blue-400 transition-colors"
+                                  className="text-blue-600 hover:text-blue-800 hover:underline font-medium not-italic"
                                 >
-                                  <ExternalLink className="w-3 h-3" />
-                                  Paper
+                                  pdf
                                 </a>
                               )}
-                              {pub.pdfUrl && (
-                                <a 
-                                  href={pub.pdfUrl} 
-                                  target="_blank" 
+                              {pub.officialUrl && (
+                                <a
+                                  href={pub.officialUrl}
+                                  target="_blank"
                                   rel="noreferrer"
-                                  className="inline-flex items-center gap-1 px-2 py-0.5 text-xs font-medium rounded border border-red-300 bg-red-50 text-red-700 hover:bg-red-100 hover:border-red-400 transition-colors"
+                                  className="text-blue-600 hover:text-blue-800 hover:underline font-medium not-italic"
                                 >
-                                  <FileText className="w-3 h-3" />
-                                  PDF
+                                  paper
                                 </a>
                               )}
                               {pub.codeUrl && (
-                                <a 
-                                  href={pub.codeUrl} 
-                                  target="_blank" 
+                                <a
+                                  href={pub.codeUrl}
+                                  target="_blank"
                                   rel="noreferrer"
-                                  className="inline-flex items-center gap-1 px-2 py-0.5 text-xs font-medium rounded border border-green-300 bg-green-50 text-green-700 hover:bg-green-100 hover:border-green-400 transition-colors"
+                                  className="text-blue-600 hover:text-blue-800 hover:underline font-medium not-italic"
                                 >
-                                  <ExternalLink className="w-3 h-3" />
-                                  Code
+                                  Codes
                                 </a>
                               )}
                             </div>
-                          )}
-                        </li>
+                          </div>
+                        </div>
                       ))}
-                    </ul>
+                    </div>
                   </div>
                 ))}
               </div>

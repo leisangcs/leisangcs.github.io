@@ -319,6 +319,7 @@ export const publications: Publication[] = [
     venue: "IEEE International Conference on Web Services (ICWS)",
     year: 2025,
     tags: ["Service Recommendation"],
+    pdfUrl: "/papers/Quality_of_Service_Prediction_via_Large_Language_Models.pdf",
     officialUrl: "https://ieeexplore.ieee.org/document/11169703",
   },
   {

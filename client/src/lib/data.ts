@@ -313,6 +313,15 @@ export const publications: Publication[] = [
     officialUrl: "https://arxiv.org/abs/2506.03627",
   },
     {
+    id: "liu-qos-prediction-2025",
+    title: "Quality of Service Prediction via Large Language Models",
+    authors: ["Huiying Liu", "Zekun Zhang", "Lei Sang", "Qilin Wu", "Yiwen Zhang"],
+    venue: "IEEE International Conference on Web Services (ICWS)",
+    year: 2025,
+    tags: ["Service Recommendation"],
+    officialUrl: "https://ieeexplore.ieee.org/document/11169703",
+  },
+  {
     id: "sang-graph-structure-2025",
     title: "Graph Structure Learning for Robust Recommendation",
     authors: ["Lei Sang", "Hang Yuan", "Yuee Huang", "Yiwen Zhang"],

@@ -50,25 +50,27 @@ export const profile: Profile = {
 };
 
 export const publications: Publication[] = [
+    {
+    id: "lu-clues-to-generation-2026",
+    title: "From Clues to Generation: Language-Guided Conditional Diffusion for Cross-Domain Recommendation",
+    authors: ["Ziang Lu", "Lei Sang", "Lin Mu", "Yiwen Zhang"],
+    venue: "Proceedings of the International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR)",
+    year: 2026,
+    tags: ["Recommendation", "NLP"],
+    officialUrl: "https://arxiv.org/abs/2604.05365",
+  },
+  
   {
     id: "mu-talklora-2026",
     title: "TalkLoRA: Communication-Aware Mixture of Low-Rank Adaptation for Large Language Models",
     authors: ["Lin Mu", "Haiyang Wang", "Li Ni", "Lei Sang", "Zhize Wu", "Peiquan Jin", "Yiwen Zhang"],
-    venue: "arXiv preprint",
+    venue: "Annual Meeting of the Association for Computational Linguistics (ACL)",
     year: 2026,
     tags: ["NLP"],
     officialUrl: "https://arxiv.org/abs/2604.06291",
   },
 
-  {
-    id: "lu-clues-to-generation-2026",
-    title: "From Clues to Generation: Language-Guided Conditional Diffusion for Cross-Domain Recommendation",
-    authors: ["Ziang Lu", "Lei Sang", "Lin Mu", "Yiwen Zhang"],
-    venue: "arXiv preprint",
-    year: 2026,
-    tags: ["Recommendation", "NLP"],
-    officialUrl: "https://arxiv.org/abs/2604.05365",
-  },
+
 
   {
     id: "sang-ibnet-2026",

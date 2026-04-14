@@ -51,6 +51,26 @@ export const profile: Profile = {
 
 export const publications: Publication[] = [
   {
+    id: "mu-talklora-2026",
+    title: "TalkLoRA: Communication-Aware Mixture of Low-Rank Adaptation for Large Language Models",
+    authors: ["Lin Mu", "Haiyang Wang", "Li Ni", "Lei Sang", "Zhize Wu", "Peiquan Jin", "Yiwen Zhang"],
+    venue: "arXiv preprint",
+    year: 2026,
+    tags: ["NLP"],
+    officialUrl: "https://arxiv.org/abs/2604.06291",
+  },
+
+  {
+    id: "lu-clues-to-generation-2026",
+    title: "From Clues to Generation: Language-Guided Conditional Diffusion for Cross-Domain Recommendation",
+    authors: ["Ziang Lu", "Lei Sang", "Lin Mu", "Yiwen Zhang"],
+    venue: "arXiv preprint",
+    year: 2026,
+    tags: ["Recommendation", "NLP"],
+    officialUrl: "https://arxiv.org/abs/2604.05365",
+  },
+
+  {
     id: "sang-ibnet-2026",
     title: "Optimizing Feature Interaction via Information Bottleneck for CTR Prediction",
     authors: ["Lei Sang", "Hanwei Li", "Honghao Li", "Yiwen Zhang", "Xindong Wu"],

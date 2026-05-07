@@ -57,6 +57,7 @@ export const publications: Publication[] = [
     venue: "Proceedings of the International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR)",
     year: 2026,
     tags: ["Recommendation", "NLP"],
+    pdfUrl: "/papers/From_Clues_to_Generation_Language-Guided_Conditional_Diffusion_for_Cross-Domain_Recommendation.pdf",
     officialUrl: "https://arxiv.org/abs/2604.05365",
   },
   
@@ -67,6 +68,7 @@ export const publications: Publication[] = [
     venue: "Annual Meeting of the Association for Computational Linguistics (ACL)",
     year: 2026,
     tags: ["NLP"],
+    pdfUrl: "/papers/TalkLoRA_Communication-Aware_Mixture_of_Low-Rank_Adaptation_for_Large_Language_Models.pdf",
     officialUrl: "https://arxiv.org/abs/2604.06291",
   },
 
@@ -518,4 +520,3 @@ export const publications: Publication[] = [
   },
 
 ];
-

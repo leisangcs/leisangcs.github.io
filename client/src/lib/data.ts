@@ -60,39 +60,6 @@ export const publications: Publication[] = [
     pdfUrl: "/papers/From_Clues_to_Generation_Language-Guided_Conditional_Diffusion_for_Cross-Domain_Recommendation.pdf",
     officialUrl: "https://arxiv.org/abs/2604.05365",
   },
-  
-  {
-    id: "mu-talklora-2026",
-    title: "TalkLoRA: Communication-Aware Mixture of Low-Rank Adaptation for Large Language Models",
-    authors: ["Lin Mu", "Haiyang Wang", "Li Ni", "Lei Sang", "Zhize Wu", "Peiquan Jin", "Yiwen Zhang"],
-    venue: "Annual Meeting of the Association for Computational Linguistics (ACL)",
-    year: 2026,
-    tags: ["NLP"],
-    pdfUrl: "/papers/TalkLoRA_Communication-Aware_Mixture_of_Low-Rank_Adaptation_for_Large_Language_Models.pdf",
-    officialUrl: "https://aclanthology.org/2026.acl-long.840/",
-  },
-
-  {
-    id: "mu-graphlora-2026",
-    title: "GraphLoRA: Structure-Aware Low-Rank Adaptation for Large Language Model Recommendation",
-    authors: ["Lin Mu", "Guoji Wang", "Li Ni", "Lei Sang", "Zhize Wu", "Peiquan Jin", "Yiwen Zhang"],
-    venue: "Findings of the Association for Computational Linguistics: ACL 2026",
-    year: 2026,
-    tags: ["Recommendation", "NLP"],
-    pdfUrl: "https://aclanthology.org/2026.findings-acl.645.pdf",
-    officialUrl: "https://aclanthology.org/2026.findings-acl.645/",
-  },
-
-  {
-    id: "mu-robustness-2026",
-    title: "Robustness of Prompting: Enhancing Robustness of Large Language Models Against Prompt Attacks",
-    authors: ["Lin Mu", "Guowei Chu", "Li Ni", "Lei Sang", "Zhize Wu", "Peiquan Jin", "Yiwen Zhang"],
-    venue: "IEEE Transactions on Artificial Intelligence",
-    year: 2026,
-    tags: ["Security/Robustness", "NLP"],
-    pdfUrl: "/papers/Robustness_of_Prompting_Enhancing_Robustness_of_Large_Language_Models_Against_Pr.pdf",
-    officialUrl: "https://ieeexplore.ieee.org/document/11535755",
-  },
 
   {
     id: "sang-hdcl-2026",
@@ -101,10 +68,9 @@ export const publications: Publication[] = [
     venue: "IEEE Transactions on Systems, Man, and Cybernetics: Systems",
     year: 2026,
     tags: ["Recommendation", "Graph Learning"],
+    pdfUrl: "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11577188",
     officialUrl: "https://ieeexplore.ieee.org/document/11577188",
   },
-
-
 
   {
     id: "sang-ibnet-2026",
@@ -171,6 +137,36 @@ export const publications: Publication[] = [
   
     pdfUrl: "/papers/Heterogeneous_Adaptive_Preference_Learning_for_Recommendation.pdf",
     officialUrl: "https://dl.acm.org/doi/10.1145/3656480",
+  },
+  {
+    id: "mu-graphlora-2026",
+    title: "GraphLoRA: Structure-Aware Low-Rank Adaptation for Large Language Model Recommendation",
+    authors: ["Lin Mu", "Guoji Wang", "Li Ni", "Lei Sang", "Zhize Wu", "Peiquan Jin", "Yiwen Zhang"],
+    venue: "Findings of the Association for Computational Linguistics: ACL 2026",
+    year: 2026,
+    tags: ["Recommendation", "NLP"],
+    pdfUrl: "https://aclanthology.org/2026.findings-acl.645.pdf",
+    officialUrl: "https://aclanthology.org/2026.findings-acl.645/",
+  },
+  {
+    id: "mu-talklora-2026",
+    title: "TalkLoRA: Communication-Aware Mixture of Low-Rank Adaptation for Large Language Models",
+    authors: ["Lin Mu", "Haiyang Wang", "Li Ni", "Lei Sang", "Zhize Wu", "Peiquan Jin", "Yiwen Zhang"],
+    venue: "Annual Meeting of the Association for Computational Linguistics (ACL)",
+    year: 2026,
+    tags: ["NLP"],
+    pdfUrl: "/papers/TalkLoRA_Communication-Aware_Mixture_of_Low-Rank_Adaptation_for_Large_Language_Models.pdf",
+    officialUrl: "https://aclanthology.org/2026.acl-long.840/",
+  },
+  {
+    id: "mu-robustness-2026",
+    title: "Robustness of Prompting: Enhancing Robustness of Large Language Models Against Prompt Attacks",
+    authors: ["Lin Mu", "Guowei Chu", "Li Ni", "Lei Sang", "Zhize Wu", "Peiquan Jin", "Yiwen Zhang"],
+    venue: "IEEE Transactions on Artificial Intelligence",
+    year: 2026,
+    tags: ["Security/Robustness", "NLP"],
+    pdfUrl: "/papers/Robustness_of_Prompting_Enhancing_Robustness_of_Large_Language_Models_Against_Pr.pdf",
+    officialUrl: "https://ieeexplore.ieee.org/document/11535755",
   },
   {
     id: "sang-intent-guided-2025",

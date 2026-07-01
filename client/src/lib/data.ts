@@ -69,7 +69,39 @@ export const publications: Publication[] = [
     year: 2026,
     tags: ["NLP"],
     pdfUrl: "/papers/TalkLoRA_Communication-Aware_Mixture_of_Low-Rank_Adaptation_for_Large_Language_Models.pdf",
-    officialUrl: "https://arxiv.org/abs/2604.06291",
+    officialUrl: "https://aclanthology.org/2026.acl-long.840/",
+  },
+
+  {
+    id: "mu-graphlora-2026",
+    title: "GraphLoRA: Structure-Aware Low-Rank Adaptation for Large Language Model Recommendation",
+    authors: ["Lin Mu", "Guoji Wang", "Li Ni", "Lei Sang", "Zhize Wu", "Peiquan Jin", "Yiwen Zhang"],
+    venue: "Findings of the Association for Computational Linguistics: ACL 2026",
+    year: 2026,
+    tags: ["Recommendation", "NLP"],
+    pdfUrl: "https://aclanthology.org/2026.findings-acl.645.pdf",
+    officialUrl: "https://aclanthology.org/2026.findings-acl.645/",
+  },
+
+  {
+    id: "mu-robustness-2026",
+    title: "Robustness of Prompting: Enhancing Robustness of Large Language Models Against Prompt Attacks",
+    authors: ["Lin Mu", "Guowei Chu", "Li Ni", "Lei Sang", "Zhize Wu", "Peiquan Jin", "Yiwen Zhang"],
+    venue: "IEEE Transactions on Artificial Intelligence",
+    year: 2026,
+    tags: ["Security/Robustness", "NLP"],
+    pdfUrl: "/papers/Robustness_of_Prompting_Enhancing_Robustness_of_Large_Language_Models_Against_Pr.pdf",
+    officialUrl: "https://ieeexplore.ieee.org/document/11535755",
+  },
+
+  {
+    id: "sang-hdcl-2026",
+    title: "Heterogeneous Debiasing Contrastive Learning for Graph Recommendation",
+    authors: ["Lei Sang", "Jiahao Cheng", "Lin Mu", "Yiwen Zhang", "Xindong Wu"],
+    venue: "IEEE Transactions on Systems, Man, and Cybernetics: Systems",
+    year: 2026,
+    tags: ["Recommendation", "Graph Learning"],
+    officialUrl: "https://ieeexplore.ieee.org/document/11577188",
   },
 
 
@@ -325,16 +357,6 @@ export const publications: Publication[] = [
     tags: ["CTR Prediction"],
     pdfUrl: "/papers/Quadratic_Interest_Network_for_Multimodal_Click-Through_Rate_Prediction.pdf",
     officialUrl: "https://arxiv.org/abs/2504.17699",
-  },
-  {
-    id: "mu-robustness-2025",
-    title: "Robustness of Prompting: Enhancing Robustness of Large Language Models Against Prompting Attacks",
-    authors: ["Lin Mu", "Guowei Chu", "Li Ni", "Lei Sang", "Zhize Wu", "Peiquan Jin", "Yiwen Zhang"],
-    venue: "arXiv preprint",
-    year: 2025,
-    tags: ["Security/Robustness", "NLP"],
-    pdfUrl: "/papers/Robustness_of_Prompting_Enhancing_Robustness_of_Large_Language_Models_Against_Pr.pdf",
-    officialUrl: "https://arxiv.org/abs/2506.03627",
   },
     {
     id: "liu-qos-prediction-2025",

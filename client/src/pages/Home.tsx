@@ -1,5 +1,4 @@
 import { Badge } from "@/components/ui/badge";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { profile, publications } from "@/lib/data";
 import { ExternalLink, Mail, MapPin } from "lucide-react";
 import { useMemo } from "react";
@@ -20,121 +19,107 @@ export default function Home() {
     return Object.entries(grouped).sort((a, b) => Number(b[0]) - Number(a[0]));
   }, []);
 
-  // Split into recent (2023 and later) and earlier (before 2023)
+  // Recent years (2023 and later) stay grouped by year
   const recentYears = useMemo(
     () => publicationsByYear.filter(([year]) => Number(year) >= CUTOFF_YEAR),
     [publicationsByYear]
   );
-  const earlierYears = useMemo(
-    () => publicationsByYear.filter(([year]) => Number(year) < CUTOFF_YEAR),
+  // Earlier papers (before 2023) are merged into one flat list, sorted by year descending
+  const earlierPubs = useMemo(
+    () =>
+      publicationsByYear
+        .filter(([year]) => Number(year) < CUTOFF_YEAR)
+        .flatMap(([, pubs]) => pubs),
     [publicationsByYear]
   );
 
-  const earlierCount = useMemo(
-    () => earlierYears.reduce((sum, [, pubs]) => sum + pubs.length, 0),
-    [earlierYears]
-  );
-  const recentCount = useMemo(
-    () => recentYears.reduce((sum, [, pubs]) => sum + pubs.length, 0),
-    [recentYears]
-  );
-
-  const renderYearGroups = (groups: typeof publicationsByYear) => (
-    <div className="space-y-6">
-      {groups.map(([year, pubs]) => (
-        <div key={year} className="space-y-3">
-          <h3 className="text-base font-bold text-foreground">In the Year of {year}:</h3>
-
-          <div className="space-y-4">
-            {pubs.map((pub) => (
-              <div key={pub.id} className="flex items-start gap-3">
-                {/* 左侧：PDF图标 + paper/code 链接，纵向排列 */}
-                <div className="flex flex-col items-center gap-1 shrink-0 pt-0.5" style={{ minWidth: '42px' }}>
-                  {/* PDF 图标 */}
-                  {pub.pdfUrl ? (
-                    <a
-                      href={pub.pdfUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      title="Download PDF"
-                      className="group flex flex-col items-center"
-                    >
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 30" className="w-7 h-8 group-hover:opacity-80 transition-opacity">
-                        <rect x="1" y="1" width="22" height="28" rx="2" fill="#fff" stroke="#dc2626" strokeWidth="1.5"/>
-                        <rect x="1" y="1" width="22" height="10" rx="2" fill="#dc2626"/>
-                        <text x="12" y="8.5" textAnchor="middle" fill="#fff" fontSize="6" fontWeight="bold" fontFamily="Arial, sans-serif">PDF</text>
-                        <line x1="5" y1="16" x2="19" y2="16" stroke="#ccc" strokeWidth="1"/>
-                        <line x1="5" y1="19" x2="19" y2="19" stroke="#ccc" strokeWidth="1"/>
-                        <line x1="5" y1="22" x2="14" y2="22" stroke="#ccc" strokeWidth="1"/>
-                      </svg>
-                    </a>
-                  ) : (
-                    <div className="w-7 h-8 opacity-30">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 30" className="w-7 h-8">
-                        <rect x="1" y="1" width="22" height="28" rx="2" fill="#fff" stroke="#999" strokeWidth="1.5"/>
-                        <rect x="1" y="1" width="22" height="10" rx="2" fill="#999"/>
-                        <text x="12" y="8.5" textAnchor="middle" fill="#fff" fontSize="6" fontWeight="bold" fontFamily="Arial, sans-serif">PDF</text>
-                        <line x1="5" y1="16" x2="19" y2="16" stroke="#ccc" strokeWidth="1"/>
-                        <line x1="5" y1="19" x2="19" y2="19" stroke="#ccc" strokeWidth="1"/>
-                        <line x1="5" y1="22" x2="14" y2="22" stroke="#ccc" strokeWidth="1"/>
-                      </svg>
-                    </div>
-                  )}
-                  {/* paper 链接 */}
-                  {pub.officialUrl && (
-                    <a
-                      href={pub.officialUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-[11px] text-blue-600 hover:text-blue-800 hover:underline font-medium leading-none"
-                    >
-                      link
-                    </a>
-                  )}
-                  {/* code 链接 */}
-                  {pub.codeUrl && (
-                    <a
-                      href={pub.codeUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-[11px] text-blue-600 hover:text-blue-800 hover:underline font-medium leading-none"
-                    >
-                      code
-                    </a>
-                  )}
-                </div>
-
-                {/* 右侧：论文信息（不再包含链接） */}
-                <div className="flex flex-col gap-0.5 min-w-0">
-                  {/* 标题 */}
-                  <div className="font-bold text-foreground leading-snug">
-                    {pub.title}
-                  </div>
-
-                  {/* 作者 */}
-                  <div className="text-foreground/80 leading-snug text-sm">
-                    {pub.authors.map((author, i) => (
-                      <span key={i} className={author.includes("Lei Sang") || author.includes("Sang Lei") || author.includes("桑磊") ? "font-bold text-foreground" : ""}>
-                        {author}{i < pub.authors.length - 1 ? ", " : ""}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* 期刊/会议 + 标签 */}
-                  <div className="text-sm text-foreground/70 leading-snug flex flex-wrap items-center gap-x-2 gap-y-0.5">
-                    <span className="italic">{pub.venue}</span>
-                    {pub.tags?.map(tag => (
-                      <Badge key={tag} variant="outline" className="h-4 px-1 text-[10px] font-normal rounded-sm border-muted-foreground/30 text-muted-foreground">
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
+  const renderPub = (pub: (typeof publications)[number]) => (
+    <div key={pub.id} className="flex items-start gap-3">
+      {/* 左侧：PDF图标 + paper/code 链接，纵向排列 */}
+      <div className="flex flex-col items-center gap-1 shrink-0 pt-0.5" style={{ minWidth: '42px' }}>
+        {/* PDF 图标 */}
+        {pub.pdfUrl ? (
+          <a
+            href={pub.pdfUrl}
+            target="_blank"
+            rel="noreferrer"
+            title="Download PDF"
+            className="group flex flex-col items-center"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 30" className="w-7 h-8 group-hover:opacity-80 transition-opacity">
+              <rect x="1" y="1" width="22" height="28" rx="2" fill="#fff" stroke="#dc2626" strokeWidth="1.5"/>
+              <rect x="1" y="1" width="22" height="10" rx="2" fill="#dc2626"/>
+              <text x="12" y="8.5" textAnchor="middle" fill="#fff" fontSize="6" fontWeight="bold" fontFamily="Arial, sans-serif">PDF</text>
+              <line x1="5" y1="16" x2="19" y2="16" stroke="#ccc" strokeWidth="1"/>
+              <line x1="5" y1="19" x2="19" y2="19" stroke="#ccc" strokeWidth="1"/>
+              <line x1="5" y1="22" x2="14" y2="22" stroke="#ccc" strokeWidth="1"/>
+            </svg>
+          </a>
+        ) : (
+          <div className="w-7 h-8 opacity-30">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 30" className="w-7 h-8">
+              <rect x="1" y="1" width="22" height="28" rx="2" fill="#fff" stroke="#999" strokeWidth="1.5"/>
+              <rect x="1" y="1" width="22" height="10" rx="2" fill="#999"/>
+              <text x="12" y="8.5" textAnchor="middle" fill="#fff" fontSize="6" fontWeight="bold" fontFamily="Arial, sans-serif">PDF</text>
+              <line x1="5" y1="16" x2="19" y2="16" stroke="#ccc" strokeWidth="1"/>
+              <line x1="5" y1="19" x2="19" y2="19" stroke="#ccc" strokeWidth="1"/>
+              <line x1="5" y1="22" x2="14" y2="22" stroke="#ccc" strokeWidth="1"/>
+            </svg>
           </div>
+        )}
+        {/* paper 链接 */}
+        {pub.officialUrl && (
+          <a
+            href={pub.officialUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="text-[11px] text-blue-600 hover:text-blue-800 hover:underline font-medium leading-none"
+          >
+            link
+          </a>
+        )}
+        {/* code 链接 */}
+        {pub.codeUrl && (
+          <a
+            href={pub.codeUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="text-[11px] text-blue-600 hover:text-blue-800 hover:underline font-medium leading-none"
+          >
+            code
+          </a>
+        )}
+      </div>
+
+      {/* 右侧：论文信息（不再包含链接） */}
+      <div className="flex flex-col gap-0.5 min-w-0">
+        {/* 标题 */}
+        <div className="font-bold text-foreground leading-snug">
+          {pub.title}
         </div>
-      ))}
+
+        {/* 作者 */}
+        <div className="text-foreground/80 leading-snug text-sm">
+          {pub.authors.map((author, i) => (
+            <span key={i} className={author.includes("Lei Sang") || author.includes("Sang Lei") || author.includes("桑磊") ? "font-bold text-foreground" : ""}>
+              {author}{i < pub.authors.length - 1 ? ", " : ""}
+            </span>
+          ))}
+        </div>
+
+        {/* 期刊/会议 + 年份 + 标签 */}
+        <div className="text-sm text-foreground/70 leading-snug flex flex-wrap items-center gap-x-2 gap-y-0.5">
+          <span className="italic">{pub.venue}</span>
+          {pub.year < CUTOFF_YEAR && (
+            <span className="text-muted-foreground">({pub.year})</span>
+          )}
+          {pub.tags?.map(tag => (
+            <Badge key={tag} variant="outline" className="h-4 px-1 text-[10px] font-normal rounded-sm border-muted-foreground/30 text-muted-foreground">
+              {tag}
+            </Badge>
+          ))}
+        </div>
+      </div>
     </div>
   );
 
@@ -212,24 +197,27 @@ export default function Home() {
             <section className="space-y-4">
               <h2 className="text-lg font-bold border-b border-border pb-1 mb-3 uppercase tracking-wide">Publications</h2>
 
-              <Tabs defaultValue="recent" className="w-full">
-                <TabsList>
-                  <TabsTrigger value="recent">
-                    {CUTOFF_YEAR} – Present ({recentCount})
-                  </TabsTrigger>
-                  <TabsTrigger value="earlier">
-                    Before {CUTOFF_YEAR} ({earlierCount})
-                  </TabsTrigger>
-                </TabsList>
+              <div className="space-y-6">
+                {/* 2023 年及之后：按年份分组 */}
+                {recentYears.map(([year, pubs]) => (
+                  <div key={year} className="space-y-3">
+                    <h3 className="text-base font-bold text-foreground">In the Year of {year}:</h3>
+                    <div className="space-y-4">
+                      {pubs.map(renderPub)}
+                    </div>
+                  </div>
+                ))}
 
-                <TabsContent value="recent" className="pt-4">
-                  {renderYearGroups(recentYears)}
-                </TabsContent>
-
-                <TabsContent value="earlier" className="pt-4">
-                  {renderYearGroups(earlierYears)}
-                </TabsContent>
-              </Tabs>
+                {/* 2023 年之前：合并为一个列表，放在最后 */}
+                {earlierPubs.length > 0 && (
+                  <div className="space-y-3">
+                    <h3 className="text-base font-bold text-foreground">Before {CUTOFF_YEAR}:</h3>
+                    <div className="space-y-4">
+                      {earlierPubs.map(renderPub)}
+                    </div>
+                  </div>
+                )}
+              </div>
             </section>
 
             {/* Footer */}

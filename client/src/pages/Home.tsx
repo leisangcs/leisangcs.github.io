@@ -3,7 +3,7 @@ import { profile, publications } from "@/lib/data";
 import { ExternalLink, Mail, MapPin } from "lucide-react";
 import { useMemo } from "react";
 
-const CUTOFF_YEAR = 2023;
+const CUTOFF_YEAR = 2024;
 
 export default function Home() {
   // Group publications by year
@@ -19,12 +19,12 @@ export default function Home() {
     return Object.entries(grouped).sort((a, b) => Number(b[0]) - Number(a[0]));
   }, []);
 
-  // Recent years (2023 and later) stay grouped by year
+  // Recent years (2024 and later) stay grouped by year
   const recentYears = useMemo(
     () => publicationsByYear.filter(([year]) => Number(year) >= CUTOFF_YEAR),
     [publicationsByYear]
   );
-  // Earlier papers (before 2023) are merged into one flat list, sorted by year descending
+  // Earlier papers (2023 and before) are merged into one flat list, sorted by year descending
   const earlierPubs = useMemo(
     () =>
       publicationsByYear
@@ -198,7 +198,7 @@ export default function Home() {
               <h2 className="text-lg font-bold border-b border-border pb-1 mb-3 uppercase tracking-wide">Publications</h2>
 
               <div className="space-y-6">
-                {/* 2023 年及之后：按年份分组 */}
+                {/* 2024 年及之后：按年份分组 */}
                 {recentYears.map(([year, pubs]) => (
                   <div key={year} className="space-y-3">
                     <h3 className="text-base font-bold text-foreground">In the Year of {year}:</h3>
@@ -208,7 +208,7 @@ export default function Home() {
                   </div>
                 ))}
 
-                {/* 2023 年之前：合并为一个列表，放在最后 */}
+                {/* 2023 年及之前：合并为一个列表，放在最后 */}
                 {earlierPubs.length > 0 && (
                   <div className="space-y-3">
                     <h3 className="text-base font-bold text-foreground">Before {CUTOFF_YEAR}:</h3>

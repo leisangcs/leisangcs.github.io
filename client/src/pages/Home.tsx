@@ -34,7 +34,7 @@ export default function Home() {
   );
 
   const renderPub = (pub: (typeof publications)[number]) => (
-    <div key={pub.id} className="flex items-start gap-3 rounded-md bg-muted/40 hover:bg-muted/70 transition-colors p-2 -mx-2">
+    <div key={pub.id} className="flex items-start gap-3 rounded-md bg-muted/60 hover:bg-muted/90 transition-colors px-2 py-1 -mx-2">
       {/* 左侧：PDF图标 + paper/code 链接，纵向排列 */}
       <div className="flex flex-col items-center gap-1 shrink-0 pt-0.5" style={{ minWidth: '42px' }}>
         {/* PDF 图标 */}

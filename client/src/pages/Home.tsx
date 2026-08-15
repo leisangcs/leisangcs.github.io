@@ -202,7 +202,7 @@ export default function Home() {
                 {recentYears.map(([year, pubs]) => (
                   <div key={year} className="space-y-3">
                     <h3 className="text-base font-bold text-foreground">In the Year of {year}:</h3>
-                    <div className="space-y-2">
+                    <div className="space-y-1">
                       {pubs.map(renderPub)}
                     </div>
                   </div>
@@ -212,7 +212,7 @@ export default function Home() {
                 {earlierPubs.length > 0 && (
                   <div className="space-y-3">
                     <h3 className="text-base font-bold text-foreground">Before {CUTOFF_YEAR}:</h3>
-                    <div className="space-y-2">
+                    <div className="space-y-1">
                       {earlierPubs.map(renderPub)}
                     </div>
                   </div>

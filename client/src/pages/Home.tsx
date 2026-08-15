@@ -34,7 +34,7 @@ export default function Home() {
   );
 
   const renderPub = (pub: (typeof publications)[number]) => (
-    <div key={pub.id} className="flex items-start gap-3 rounded-lg bg-muted/40 hover:bg-muted/70 transition-colors p-3 -mx-3">
+    <div key={pub.id} className="flex items-start gap-3 rounded-md bg-muted/40 hover:bg-muted/70 transition-colors p-2 -mx-2">
       {/* 左侧：PDF图标 + paper/code 链接，纵向排列 */}
       <div className="flex flex-col items-center gap-1 shrink-0 pt-0.5" style={{ minWidth: '42px' }}>
         {/* PDF 图标 */}
@@ -92,14 +92,14 @@ export default function Home() {
       </div>
 
       {/* 右侧：论文信息（不再包含链接） */}
-      <div className="flex flex-col gap-0.5 min-w-0">
+      <div className="flex flex-col gap-0 min-w-0">
         {/* 标题 */}
-        <div className="font-bold text-foreground leading-snug">
+        <div className="font-bold text-foreground leading-tight">
           {pub.title}
         </div>
 
         {/* 作者 */}
-        <div className="text-foreground/80 leading-snug text-sm">
+        <div className="text-foreground/80 leading-tight text-sm">
           {pub.authors.map((author, i) => (
             <span key={i} className={author.includes("Lei Sang") || author.includes("Sang Lei") || author.includes("桑磊") ? "font-bold text-foreground" : ""}>
               {author}{i < pub.authors.length - 1 ? ", " : ""}
@@ -108,7 +108,7 @@ export default function Home() {
         </div>
 
         {/* 期刊/会议 + 年份 + 标签 */}
-        <div className="text-sm text-foreground/70 leading-snug flex flex-wrap items-center gap-x-2 gap-y-0.5">
+        <div className="text-sm text-foreground/70 leading-tight flex flex-wrap items-center gap-x-2 gap-y-0.5">
           <span className="italic">{pub.venue}</span>
           {pub.year < CUTOFF_YEAR && (
             <span className="text-muted-foreground">({pub.year})</span>
@@ -202,7 +202,7 @@ export default function Home() {
                 {recentYears.map(([year, pubs]) => (
                   <div key={year} className="space-y-3">
                     <h3 className="text-base font-bold text-foreground">In the Year of {year}:</h3>
-                    <div className="space-y-1">
+                    <div className="space-y-0.5">
                       {pubs.map(renderPub)}
                     </div>
                   </div>
@@ -212,7 +212,7 @@ export default function Home() {
                 {earlierPubs.length > 0 && (
                   <div className="space-y-3">
                     <h3 className="text-base font-bold text-foreground">Before {CUTOFF_YEAR}:</h3>
-                    <div className="space-y-1">
+                    <div className="space-y-0.5">
                       {earlierPubs.map(renderPub)}
                     </div>
                   </div>

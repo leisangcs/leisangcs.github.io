@@ -50,6 +50,27 @@ export const profile: Profile = {
 };
 
 export const publications: Publication[] = [
+  {
+    id: "sang-pacl-cdr-2026",
+    title: "PACL-CDR: Popularity-Adaptive Contrastive Learning for Cross-Domain Recommendation",
+    authors: ["Lei Sang", "Wei Zhang", "Li Ni", "Yiwen Zhang*", "Xindong Wu"],
+    venue: "IEEE Transactions on Knowledge and Data Engineering",
+    year: 2026,
+    tags: ["Recommendation", "TKDE"],
+    pdfUrl: "/papers/PACL-CDR_Popularity-Adaptive_Contrastive_Learning_for_Cross-Domain_Recommendation.pdf",
+    officialUrl: "https://doi.org/10.1109/TKDE.2026.3740311",
+    codeUrl: "https://github.com/Alpacanm/PACL-CDR",
+  },
+  {
+    id: "lu-bgaflow-2026",
+    title: "Bézier-Guided Adaptive Flow for Cross-domain Sequential Recommendation",
+    authors: ["Ziang Lu", "Yu Zhang", "Xinzhe Jiang", "Lei Sang", "Yiwen Zhang*"],
+    venue: "arXiv preprint",
+    year: 2026,
+    tags: ["Recommendation", "NLP"],
+    pdfUrl: "/papers/Bezier-Guided_Adaptive_Flow_for_Cross-domain_Sequential_Recommendation.pdf",
+    officialUrl: "https://arxiv.org/abs/2610.30825",
+  },
     {
     id: "lu-clues-to-generation-2026",
     title: "From Clues to Generation: Language-Guided Conditional Diffusion for Cross-Domain Recommendation",
